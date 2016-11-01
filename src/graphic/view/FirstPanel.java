@@ -24,6 +24,10 @@ public class FirstPanel extends JPanel
 		colorButton = new JButton("Color");
 		randomButton = new JButton("Random");
 		baseLayout = new SpringLayout();
+		baseLayout.putConstraint(SpringLayout.NORTH, colorButton, 6, SpringLayout.SOUTH, randomButton);
+		baseLayout.putConstraint(SpringLayout.EAST, colorButton, -10, SpringLayout.EAST, randomButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 82, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, randomButton, 170, SpringLayout.WEST, this);
 
 		setupPanel();
 		setupLayout();
@@ -40,10 +44,6 @@ public class FirstPanel extends JPanel
 
 	private void setupLayout()
 	{
-		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 10, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, randomButton, 10, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, colorButton, -10, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.EAST, colorButton, -10, SpringLayout.EAST, this);
 
 	}
 
